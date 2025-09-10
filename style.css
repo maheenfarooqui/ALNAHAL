@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F9F4F0;
+}
+h1, h2, h3, h4{
+     font-family: "Signika Negative", sans-serif;
+     color: #5A3733;
+}
+p , a , span{
+      font-family: "Open Sans", sans-serif;
+}
+
+/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,For header */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 70px;
+    
+}
+nav img{
+    width: 200px;
+}
+nav .hamburger img{
+    width: 45px;
+    margin-top: 15px;
+    display: none;
+}
+.navRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navRightLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.navRightLinks a{
+    color: #5A3733;
+    text-decoration: none;
+}
+.navRightLinks a:hover{
+    color: #EB6D2F;
+    text-decoration: underline #EDAC1D;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 7px;
+}
+.navRight button{
+    background-color: transparent;
+    color: #5A3733;
+    border: 2px solid #EB6D2F;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.navRight button:hover{
+    background-color: #EB6D2F;
+    color: white;
+}
+
+/* ,,,,,,,,,,,,,,,,,,hero section */
+
+.heroBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+
+}
+.heroBoxText{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+.heroBoxText span{
+    color: #EB6D2F;
+
+}
+.heroBoxText h1{
+    color: #5A3733;
+    font-weight: bolder;
+    font-size: 100px;
+    position: relative;
+    display: inline-block;
+
+}
+.heroBoxText h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 50px;
+    height: 5px; 
+    background-color:#EB6D2F; 
+    border-radius: 2px; 
+}
+.heroBoxText p{
+    color: #41393F;
+    line-height: 1.5;
+    font-size: 20px;
+
+}
+.heroBoxText button{
+    background-color: #EB6D2F;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    width: 150px;
+
+}
+.heroBoxText button:hover{
+    background-color: #EDAC1D;
+    cursor: pointer;
+}
+.heroBoxImage img{
+    padding-left: 90px;
+}
+/* .................what we do */
+.whatWeDo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 70px;
+
+}
+.whatWeDo span , .whyUs span{
+    color: #EB6D2F;
+}
+.whatWeDo h1 , .whyUs h1{
+    color: #5A3733;
+    font-size: 70px;
+    position: relative;
+    display: inline-block;
+}
+.whatWeDo h1::after , .whyUs h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 50px;
+    height: 5px; 
+    background-color:#EB6D2F; 
+    border-radius: 2px; 
+}
+.whatWeDo p{
+    color: #41393F;
+    font-size: 18px;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 270px;
+
+}
+.card img{
+    width: 120px;
+
+}
+
+.card p{
+    color: #41393F;
+
+}
+.card a{
+    text-decoration: none;
+    color: #EDAC1D;
+}
+.card a:hover{
+    text-decoration: underline;
+     text-underline-offset: 7px;
+}
+/* ,,,,,,,,,,,,,,,,,,,,,,,,,,whyus */
+.whyUs{
+    display: flex;
+    gap: 50px;
+    padding: 100px 70px;
+}
+.whyUs p{
+    color: #41393F;
+    font-size: 18px;
+}
+.whyUs .whyUsImg img{
+    width: 550px;
+}
+.whyUsText .textContent{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.whyUs .textBoxs{
+    margin-top: 30px;
+}
+.whyUs .textBoxs .textBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.whyUs .textBoxs .textBox img{
+    width: 120px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:500px){
+nav{
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+.navRight{
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    right: -110%;
+    background-color: #F9F4F0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    padding-top: 15px;
+    margin-top: 100px;
+    
+
+} 
+.navRightLinks{
+    flex-direction: column;
+    align-items: start;
+    padding-left: 5px;
+    gap: 15px;
+    
+
+}
+.navRightLinks a:hover{
+    background-color: white;
+}
+.navRight button{
+    margin-left: 0px;
+}   
+.heroBox{
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 70px;
+}
+.heroBoxText{
+    width: 100%;
+}
+.heroBoxText h1{
+    font-size: 70px;
+}
+.heroBoxText p{
+    font-size: 18px;
+}
+.heroBoxImage img{
+    width: 350px;
+    padding-left: 0;
+}
+.whatWeDo{
+    gap: 20px;
+    padding: 50px 20px;
+}
+.whatWeDo h1 , .whyUs h1{
+    font-size: 40px;
+}
+.whatWeDo p{
+    font-size: 18px;
+}
+.cards{
+    flex-direction: column;
+    gap: 35px;
+}
+.whyUs{
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 20px;
+}
+.whyUs .whyUsImg img{
+    width: 350px;
+}
+.whyUs .textBoxs{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.whyUs .textBox h2{
+    font-size: 22px;
+}
+.whyUs .textBox p{
+    font-size: 16px;
+}
+.whyUs .text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+}
