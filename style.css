@@ -119,7 +119,7 @@ nav .hamburger img{
     width: 150px;
 
 }
-.heroBoxText button:hover{
+.heroBoxText button:hover, .honeyTypeCarousal .card button:hover{
     background-color: #EDAC1D;
     cursor: pointer;
 }
@@ -138,13 +138,13 @@ nav .hamburger img{
 .whatWeDo span , .whyUs span{
     color: #EB6D2F;
 }
-.whatWeDo h1 , .whyUs h1{
+.whatWeDo h1 , .whyUs h1, .honeyType .honeyTypeText .text h1{
     color: #5A3733;
-    font-size: 70px;
+    font-size: 60px;
     position: relative;
     display: inline-block;
 }
-.whatWeDo h1::after , .whyUs h1::after{
+.whatWeDo h1::after , .whyUs h1::after , .honeyType .honeyTypeText .text h1::after{
     content: "";
     position: absolute;
     left: 0;
@@ -199,7 +199,7 @@ nav .hamburger img{
 .whyUs{
     display: flex;
     gap: 50px;
-    padding: 100px 70px;
+    padding: 100px 50px;
 }
 .whyUs p{
     color: #41393F;
@@ -226,6 +226,125 @@ nav .hamburger img{
     width: 120px;
 
 }
+/* .....................honeytype */
+.honeyType{
+    display: flex;
+    gap: 20px;
+    padding: 100px 50px;
+}
+.honeyType .honeyTypeText{
+    width: 37%;
+}
+.honeyType .honeyTypeText .text span{
+    color: #EB6D2F;
+    font-weight: bold;
+}
+ .honeyType .honeyTypeText .text p{
+    color: #41393F;
+    font-size: 18px;
+    margin-top: 20px;
+
+ }
+ .lowerText ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+    
+   
+ }
+ .lowerText ul li{
+    list-style: none;
+    color: #41393F;
+    font-size: 18px;
+    display: flex;
+    align-items: center;  
+    gap: 10px;           
+    margin-bottom: 10px; 
+  
+ }
+ .lowerText ul li img{
+    width: 25px;   
+ }
+ .honeyTypeCarousal{
+    display: flex;
+    gap: 25px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    margin: 20px;
+ }
+.honeyTypeCarousal .card{
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 270px;
+    height: 500px;
+     box-sizing: border-box;
+
+}
+.carousel-container {
+    width: 62%;
+    position: relative;
+}
+.honeyTypeCarousal .card button{
+    background-color: #EB6D2F;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    width: 150px;
+    margin-top: 15px;
+}
+.dots-container{
+    text-align: center;   
+    margin-top: 20px; 
+}
+.dots {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color:#D2C5C1;
+    cursor: pointer;
+    text-align: center;
+}
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background:#725550;
+    color: white;
+    border: none;
+    width: 35px;      
+    height: 35px;     
+    border-radius: 50%;  
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;       
+    align-items: center;
+    justify-content: center;
+}
+
+.prev { left: 3px; }
+.next { right: 3px; }
+.prev:hover, .next:hover { background: #5A3733; }
+ 
+
+
+ 
+
 
 
 
@@ -336,6 +455,5 @@ nav{
     flex-direction: column;
     gap: 10px;
 }
-
 
 }
