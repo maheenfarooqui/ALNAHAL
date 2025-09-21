@@ -135,16 +135,17 @@ nav .hamburger img{
     padding: 100px 70px;
 
 }
-.whatWeDo span , .whyUs span{
+.whatWeDo span , .whyUs span, .ourStore .textStore span{
     color: #EB6D2F;
+    font-weight: bold;
 }
-.whatWeDo h1 , .whyUs h1, .honeyType .honeyTypeText .text h1{
+.whatWeDo h1 , .whyUs h1, .honeyType .honeyTypeText .text h1, .ourStore .textStore h1{
     color: #5A3733;
     font-size: 60px;
     position: relative;
     display: inline-block;
 }
-.whatWeDo h1::after , .whyUs h1::after , .honeyType .honeyTypeText .text h1::after{
+.whatWeDo h1::after , .whyUs h1::after , .honeyType .honeyTypeText .text h1::after , .ourStore .textStore h1::after{
     content: "";
     position: absolute;
     left: 0;
@@ -154,7 +155,7 @@ nav .hamburger img{
     background-color:#EB6D2F; 
     border-radius: 2px; 
 }
-.whatWeDo p{
+.whatWeDo p , .ourStore .textStore p{
     color: #41393F;
     font-size: 18px;
     text-align: center;
@@ -196,7 +197,7 @@ nav .hamburger img{
      text-underline-offset: 7px;
 }
 /* ,,,,,,,,,,,,,,,,,,,,,,,,,,whyus */
-.whyUs{
+.whyUs , .ourStore{
     display: flex;
     gap: 50px;
     padding: 100px 50px;
@@ -341,6 +342,18 @@ nav .hamburger img{
 .next { right: 3px; }
 .prev:hover, .next:hover { background: #5A3733; }
  
+/* ,,,,,,,,,,,,, ourstore */
+.ourStore{
+    padding: 100px 70px;
+
+}
+.ourStore .textStore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
 
 
  
