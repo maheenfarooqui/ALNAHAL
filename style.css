@@ -410,6 +410,99 @@ nav .hamburger img{
     cursor: pointer;
 }
 
+/* ,,,,,,,,,,,,testimonls */
+.testimonals{
+    background-color: #5A3733;
+}
+.testimonialText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 50px;
+
+}
+.testimonialText span{
+    color:#EDAC1D;
+    font-weight: bold;
+}
+.testimonialText h1{
+    color: white;
+    font-size: 60px;
+    position: relative;
+    display: inline-block;
+
+}
+.testimonialText h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 50px;
+    height: 5px; 
+    background-color:#EDAC1D; 
+    border-radius: 2px; 
+}
+.testimonialText p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+/* ...............footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 100px 70px;
+}
+footer .fLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .fLogo img{
+    width: 100px;
+   
+}
+footer .fLogo h1{
+    color: #AA9B8F;
+    font-size: 20px;
+}
+footer .fLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+}
+footer .fLinks a{
+    text-decoration: none;
+    color: #5A3733;
+    font-weight: bold;
+}
+footer .fLinks a:hover{
+    color: #EB6D2F;
+
+}
+footer .fSocials{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: white;
+}
+footer .fSocials .fa-brands{
+    background-color: #EB6D2F;
+    padding: 10px 8px;
+    border-radius: 50%;
+}
+footer .fSocials .fa-brands:hover{
+    background-color: #EDAC1D;
+}
+
 
  
 
