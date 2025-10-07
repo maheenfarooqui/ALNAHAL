@@ -533,9 +533,16 @@ nav .hamburger img{
     width: 44%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
+}
+.cForm p{
+    color: #5A3733;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
 }
 
 .cForm form{
@@ -560,6 +567,12 @@ nav .hamburger img{
 }
 .cForm form input::placeholder{
     color: #AA9B8F;
+}
+.cForm form input:focus{
+    outline-color:#EB6D2F;
+}
+.cForm form textarea:focus{
+    outline-color:#EB6D2F;
 }
 .cForm form textarea{
     color: #AA9B8F;

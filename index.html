@@ -56,7 +56,7 @@
             from our honeycombs across Pakistan. Order today and enjoy the taste
             of nature!
           </p>
-           <button><a href="#stor">Buy Now</a></button>
+          <button><a href="#stor">Buy Now</a></button>
         </div>
         <div class="heroBoxImage">
           <img src="Assets/heroImage.png" alt="Honey Image" />
@@ -200,7 +200,7 @@
                 Order our honey online and get it delivered straight to your
                 doorstep.
               </p>
-               <button><a href="#stor">Shop Now</a></button>
+              <button><a href="#stor">Shop Now</a></button>
             </div>
             <div class="card">
               <img src="Assets/honey.png" alt="Honey" />
@@ -218,7 +218,7 @@
                 Order our honey online and get it delivered straight to your
                 doorstep.
               </p>
-               <button><a href="#stor">Shop Now</a></button>
+              <button><a href="#stor">Shop Now</a></button>
             </div>
             <div class="card">
               <img src="Assets/honey.png" alt="Honey" />
@@ -227,7 +227,7 @@
                 Order our honey online and get it delivered straight to your
                 doorstep.
               </p>
-               <button><a href="#stor">Shop Now</a></button>
+              <button><a href="#stor">Shop Now</a></button>
             </div>
             <div class="card">
               <img src="Assets/honey.png" alt="Honey" />
@@ -236,7 +236,7 @@
                 Order our honey online and get it delivered straight to your
                 doorstep.
               </p>
-               <button><a href="#stor">Shop Now</a></button>
+              <button><a href="#stor">Shop Now</a></button>
             </div>
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
@@ -391,7 +391,7 @@
           </div>
         </div>
         <div class="cForm">
-          <form action="php">
+          <form id="contactForm">
             <input
               type="text"
               name="name"
@@ -414,8 +414,9 @@
               placeholder="Enter your email*"
             />
             <textarea name="message" id="message">Type your message</textarea>
-            <button>Request a Qoute</button>
+            <button type="submit">Request a Qoute</button>
           </form>
+          <p id="status"></p>
         </div>
       </section>
     </main>
@@ -440,6 +441,57 @@
         <p>© Created by Maheen Zuhra All rights Reserved</p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+
+    <script>
+      // 🔹 Firebase config
+      const firebaseConfig = {
+        apiKey: "AIzaSyB9HJAe_a4Dqonse0KSs89sC2P3BQ6-HsY",
+        authDomain: "alnahal-form.firebaseapp.com",
+        databaseURL: "https://alnahal-form-default-rtdb.firebaseio.com", // ✅ IMPORTANT
+        projectId: "alnahal-form",
+        storageBucket: "alnahal-form.appspot.com",
+        messagingSenderId: "251875792667",
+        appId: "1:251875792667:web:a2cb4db83432bd1686e5be",
+      };
+
+      // 🔹 Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+
+      // 🔹 Form Handling
+      const form = document.getElementById("contactForm");
+      const statusMsg = document.getElementById("status");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const phoneNumber = document.getElementById("number").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Push data to Firebase Realtime Database
+        const newMessageRef = db.ref("messages").push();
+        newMessageRef
+          .set({
+            name,
+            phoneNumber,
+            email,
+            message,
+            time: new Date().toISOString(),
+          })
+          .then(() => {
+            statusMsg.innerText = "✅ Message Sent Successfully!";
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            statusMsg.innerText = "❌ Error sending message.";
+          });
+      });
+    </script>
   </body>
 </html>
